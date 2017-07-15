@@ -74,6 +74,11 @@ public class Walk3Fragment extends Fragment {
     }
 
     public void walkChange() {
+        ll_judy.setVisibility(View.INVISIBLE);
+        image_good_job1.setVisibility(View.INVISIBLE);
+        text_catch3.setVisibility(View.INVISIBLE);
+        text_thanks.setVisibility(View.INVISIBLE);
+
         init(0);
     }
 
@@ -91,21 +96,28 @@ public class Walk3Fragment extends Fragment {
                 public void run() {
                     switch (carry) {
                         case 0:
-                            ll_judy.startAnimation(animBounce);init(1);
+                            ll_judy.setVisibility(View.VISIBLE);
+                            ll_judy.startAnimation(animBounce);
+                            init(1);
                             break;
                         case 1:
-                            image_good_job1.startAnimation(animBounce);init(2);
+                            image_good_job1.setVisibility(View.VISIBLE);
+                            image_good_job1.startAnimation(animBounce);
+                            init(2);
                             break;
                         case 2:
-                            text_thanks.startAnimation(animBounce);init(3);
+                            text_thanks.setVisibility(View.VISIBLE);
+                            text_thanks.startAnimation(animBounce);
+                            init(3);
                             break;
                         case 3:
+                            text_catch3.setVisibility(View.VISIBLE);
                             text_catch3.startAnimation(animBounce);
                             break;
                     }
                 }
 
-            }, delay );
+            }, delay);
 
         } catch (Exception e) {
             e.printStackTrace();

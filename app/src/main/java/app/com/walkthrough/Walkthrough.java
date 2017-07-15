@@ -25,7 +25,7 @@ public class Walkthrough extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager mViewPager;
     private final int NUMBER_OF_PAGES = 4;
-    Button SKIP_BUTTON, Sign_BUTTON;
+    Button join_BUTTON, Sign_BUTTON;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,10 @@ public class Walkthrough extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walk);
         main_content = (LinearLayout) findViewById(R.id.main_content);
-        SKIP_BUTTON = (Button) findViewById(R.id.SKIP_BUTTON);
+        join_BUTTON = (Button) findViewById(R.id.SKIP_BUTTON);
         Sign_BUTTON = (Button) findViewById(R.id.Sign_BUTTON);
         Sign_BUTTON.setOnClickListener(signOnViewClickListner);
-        SKIP_BUTTON.setOnClickListener(joinOnViewClickListner);
+        join_BUTTON.setOnClickListener(joinOnViewClickListner);
 
     }
 
@@ -83,8 +83,8 @@ public class Walkthrough extends AppCompatActivity {
                         super.onTabSelected(tab);
                         switch (position) {
                             case 0:
-                                SKIP_BUTTON.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                                SKIP_BUTTON.setTextColor(getResources().getColor(R.color.white));
+                                join_BUTTON.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                join_BUTTON.setTextColor(getResources().getColor(R.color.white));
                                 Sign_BUTTON.setTextColor(getResources().getColor(R.color.colorAccent));
                                 Sign_BUTTON.setBackgroundColor(getResources().getColor(R.color.gray));
                                 controls_layout.setBackgroundColor(getResources().getColor(R.color.gray));
@@ -108,8 +108,8 @@ public class Walkthrough extends AppCompatActivity {
     }
 
     void setColors() {
-        SKIP_BUTTON.setBackground(getResources().getDrawable(R.drawable.button_bg));
-        SKIP_BUTTON.setTextColor(getResources().getColor(R.color.white));
+        join_BUTTON.setBackground(getResources().getDrawable(R.drawable.button_bg));
+        join_BUTTON.setTextColor(getResources().getColor(R.color.white));
         Sign_BUTTON.setTextColor(getResources().getColor(R.color.white));
         Sign_BUTTON.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         controls_layout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
